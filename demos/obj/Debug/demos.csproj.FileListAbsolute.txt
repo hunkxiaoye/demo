@@ -7,3 +7,5 @@ F:\zero\demos\demos\bin\Model.pdb
 F:\zero\demos\demos\obj\Debug\demos.csprojResolveAssemblyReference.cache
 F:\zero\demos\demos\obj\Debug\demos.dll
 F:\zero\demos\demos\obj\Debug\demos.pdb
+F:\zero\demos\demos\bin\Dao.dll
+F:\zero\demos\demos\bin\Dao.pdb
