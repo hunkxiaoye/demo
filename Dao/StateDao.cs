@@ -16,10 +16,11 @@ namespace Dao
         public State Add
             (State state)
         {
-            string sql = "INSERT INTO State (Statename)  output inserted.id VALUES (@Statename)";
+            string sql = "INSERT INTO State (Statename, Aid)  output inserted.id VALUES (@Statename, @Aid)";
             SqlParameter[] para = new SqlParameter[]
 					{
 						new SqlParameter("@statename", ToDBValue(state.Statename)),
+						new SqlParameter("@aid", ToDBValue(state.Aid)),
 					};
 
             int newId = (int)SqlHelper.ExecuteScalar(sql, para);
@@ -45,6 +46,7 @@ namespace Dao
                 "UPDATE State " +
                 "SET " +
             " statename = @statename"
+                + ", Aid = @aid"
 
             + " WHERE id = @id";
 
@@ -53,6 +55,7 @@ namespace Dao
 			{
 				new SqlParameter("@id", state.Id)
 					,new SqlParameter("@statename", ToDBValue(state.Statename))
+					,new SqlParameter("@aid", ToDBValue(state.Aid))
 			};
 
             return SqlHelper.ExecuteNonQuery(sql, para);
@@ -80,6 +83,7 @@ namespace Dao
 
             state.Id = (int)ToModelValue(reader, "Id");
             state.Statename = (string)ToModelValue(reader, "Statename");
+            state.Aid = (int)ToModelValue(reader, "Aid");
             return state;
         }
 

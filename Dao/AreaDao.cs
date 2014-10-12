@@ -89,7 +89,7 @@ namespace Dao
 			return (int)SqlHelper.ExecuteScalar(sql);
 		}
 		
-		public IList<Area> GetPagedData(int minrownum,int maxrownum)
+		public List<Area> GetPagedData(int minrownum,int maxrownum)
 		{
 			string sql = "SELECT * from(SELECT *,row_number() over(order by id) rownum FROM Area) t where rownum>=@minrownum and rownum<=@maxrownum";
 			using(SqlDataReader reader = SqlHelper.ExecuteDataReader(sql,
@@ -100,7 +100,7 @@ namespace Dao
 			}
 		}
 		
-		public IList<Area> GetAll()
+		public List<Area> GetAll()
 		{
 			string sql = "SELECT * FROM Area";
 			using(SqlDataReader reader = SqlHelper.ExecuteDataReader(sql))
@@ -109,7 +109,7 @@ namespace Dao
 			}
 		}
 		
-		protected IList<Area> ToModels(SqlDataReader reader)
+		protected List<Area> ToModels(SqlDataReader reader)
 		{
 			var list = new List<Area>();
 			while(reader.Read())

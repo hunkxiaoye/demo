@@ -4,33 +4,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <style type="text/css">
-        #beizhu
-        {
-            height: 95px;
-            width: 388px;
-            margin-left: 64px;
+    <script type="text/javascript" src="Content/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="ld.aspx"></script>
+    <script>
+        function selectstate(aid) {
+            var selectstatelist = [];
+            for (var i = 0; i < statelist_json.length; i++) {
+                if (statelist_json[i].aid == aid)
+                    selectstatelist.push(statelist_json[i]);
+            }
+            return selectstatelist;
         }
-        #jianjie
-        {
-            width: 374px;
-            height: 101px;
-            margin-right: 0px;
-            margin-top: 6px;
+        function instate(aid) {
+            var selectstatelist = selectstate(parseInt(aid));
+            var options = "";
+            for (var i = 0; i < selectstatelist.length; i++) {
+                options += "<option value=" + selectstatelist[i].id + ">" + selectstatelist[i].statename + "</option>";
+            }
+            $("#state").html(options);
         }
-    </style>
+        function format(select) {
+            var aid = $(select).find("option:selected").val();
+            instate(aid);
+        }
+        $(function() {
+            var aid = $("#area").find("option:selected").val();
+            instate(aid);
+        });
+    </script>
 </head>
 <body>
     <form  runat="server">
     <div>
         <span>选择区域</span>
-        <select id="area" name="area">
-
+        <select id="area" name="area" onchange="format(this)">
             <% ShowArea(); %>
         </select>
         <span>选择产地</span>
         <select id="state" name="state">
-            <% ShowState();%>
+            
         </select>
         <span>所属类别</span>
         <select id="retriecal" name="retriecal">
@@ -49,10 +61,12 @@
             <% ShowAttr();%>
         </select>
         <br />
-        商品标题<input type="text" id="title" name="title" />
+        商品标题<asp:TextBox runat="server" ID="Title"  name="Title"></asp:TextBox>
         <br/>
-        <p>商品简介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注</p>
-        <textarea id="description"name="description"></textarea><textarea id="comment" name="comment"></textarea>
+        <p>商品简介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 备注</p>
+        <asp:TextBox  ID="des" name="des" runat="server" Height="169px" TextMode="MultiLine" Width="454px"></asp:TextBox>
+        <asp:TextBox ID="comment" name="comment" runat="server" Height="172px" 
+            TextMode="MultiLine" Width="507px"></asp:TextBox>
         <p>&nbsp;</p>
         &nbsp;<br/>
         <asp:Button ID="Button1" runat="server" Text="创建" OnClick="Unnamed1_Click" />

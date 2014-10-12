@@ -34,12 +34,12 @@ namespace Bll
             return new AreaDao().GetTotalCount();
         }
 
-        public IList<Area> GetPagedData(int minrownum, int maxrownum)
+        public List<Area> GetPagedData(int minrownum, int maxrownum)
         {
             return new AreaDao().GetPagedData(minrownum, maxrownum);
         }
 
-        public IList<Area> GetAll()
+        public List<Area> GetAll()
         {
             return new AreaDao().GetAll();
         }

@@ -5,18 +5,23 @@ using System.Text;
 
 namespace Model
 {
-    [Serializable()]
+    [Serializable]
     public class Area
     {
+        private int id;
+
         public int Id
         {
-            get;
-            set;
+            get { return id; }
+            set { this.id = value; }
         }
+
+        private string areaname;
+
         public string Areaname
         {
-            get;
-            set;
+            get { return areaname; }
+            set { this.areaname = value; }
         }
     }
 }

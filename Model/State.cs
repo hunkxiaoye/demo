@@ -11,15 +11,28 @@ namespace Model
     [Serializable()]
     public class State
     {
+        private int id;
+
         public int Id
         {
-            get;
-            set;
+            get { return id; }
+            set { this.id = value; }
         }
+
+        private string statename;
+
         public string Statename
         {
-            get;
-            set;
+            get { return statename; }
+            set { this.statename = value; }
+        }
+
+        private int aid;
+
+        public int Aid
+        {
+            get { return aid; }
+            set { this.aid = value; }
         }
     }
 }
