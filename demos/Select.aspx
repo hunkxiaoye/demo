@@ -11,37 +11,47 @@
 </head>    
 <body>
 <form  runat="server">
-    <div>
+    <div class="row">
+        <div  class="span4">
         <span>选择区域</span>
         <select id="area" name="area">
             <option value="0">请选择</option>
             <% ShowArea(); %>
         </select>
+        </div>
+        <div  class="span4">
         <span>选择产地</span>
         <select id="state" name="state">
             <option value="0">请选择</option>
             <% ShowState();%>
         </select>
+        </div>
+        <div  class="span4">
         <span>所属类别</span>
        <select id="retriecal" name="retriecal">
             <option value="0">请选择</option>
             <% ShowRetriecal(); %>
-        </select><br />
-&nbsp;<span ></span>
-<div id="Div1" runat="server">
-品牌名称<input type="text" id="Title" name="Title"/>
+        </select>
+        </div>
+        </div><br />
+        <div class="row">
+            <div  class="span4">
+&nbsp;<span >品牌名称</span>
+<input type="text" id="Title" name="Title"/>
 </div>
+<div  class="span4">
         <span>品牌属性</span>
          <select id="attr" name="attr">
             <option value="0">请选择</option>
             <% ShowAttr(); %>
-        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="查询" onclick="Unnamed1_Click"/>
-        <a href="Insert.aspx">添加</a>
+        </select>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server"  class="btn btn-primary" Text="查询" onclick="Unnamed1_Click"/>
+        <a href="Insert.aspx"  class="btn btn-primary">添加</a>
     </div>
    </form>
    <div>
-    <table>
+    <table class="table table-bordered " >
     <tr>
         <th>商品编号</th>
         <th>品牌商标</th>
@@ -63,7 +73,7 @@
                     <td><%#Eval("Retriecal")%></td>
                     <td><%#Eval("Tops")%></td>
                     <td>
-                        <a href="Update.aspx?id=<%#Eval("Id")%>" target="_blank">编辑</a>
+                        <a href="Update.aspx?id=<%#Eval("Id")%>" target="_blank" class="btn btn-primary">编辑</a>
                     </td>
                   
                 </tr>
@@ -78,7 +88,7 @@
                     <td><%#Eval("Retriecal")%></td>
                     <td><%#Eval("Tops")%></td>
                     <td>
-                         <a href="Update.aspx?id=<%#Eval("Id")%> " target="_blank">编辑</a>
+                         <a href="Update.aspx?id=<%#Eval("Id")%> " target="_blank"  class="btn btn-primary">编辑</a>
                     </td>
                 </tr>
             </AlternatingItemTemplate>
