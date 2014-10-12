@@ -1,0 +1,9 @@
+F:\zero\demos\demos\bin\demos.dll
+F:\zero\demos\demos\bin\demos.pdb
+F:\zero\demos\demos\bin\Bll.dll
+F:\zero\demos\demos\bin\Model.dll
+F:\zero\demos\demos\bin\Bll.pdb
+F:\zero\demos\demos\bin\Model.pdb
+F:\zero\demos\demos\obj\Debug\demos.csprojResolveAssemblyReference.cache
+F:\zero\demos\demos\obj\Debug\demos.dll
+F:\zero\demos\demos\obj\Debug\demos.pdb

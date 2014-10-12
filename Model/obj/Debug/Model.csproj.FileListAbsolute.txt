@@ -1,0 +1,4 @@
+F:\zero\demos\Model\bin\Debug\Model.dll
+F:\zero\demos\Model\bin\Debug\Model.pdb
+F:\zero\demos\Model\obj\Debug\Model.dll
+F:\zero\demos\Model\obj\Debug\Model.pdb
