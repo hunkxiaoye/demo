@@ -7,3 +7,12 @@ F:\zero\demos\Bll\bin\Debug\Model.pdb
 F:\zero\demos\Bll\obj\Debug\Bll.csprojResolveAssemblyReference.cache
 F:\zero\demos\Bll\obj\Debug\Bll.dll
 F:\zero\demos\Bll\obj\Debug\Bll.pdb
+D:\零度时代\demos\Bll\bin\Debug\Bll.dll
+D:\零度时代\demos\Bll\bin\Debug\Bll.pdb
+D:\零度时代\demos\Bll\bin\Debug\Dao.dll
+D:\零度时代\demos\Bll\bin\Debug\Model.dll
+D:\零度时代\demos\Bll\bin\Debug\Dao.pdb
+D:\零度时代\demos\Bll\bin\Debug\Model.pdb
+D:\零度时代\demos\Bll\obj\Debug\Bll.csprojResolveAssemblyReference.cache
+D:\零度时代\demos\Bll\obj\Debug\Bll.dll
+D:\零度时代\demos\Bll\obj\Debug\Bll.pdb

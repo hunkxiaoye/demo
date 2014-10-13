@@ -24,6 +24,12 @@ namespace Bll
             return new InfoDao().Update(info);
         }
 
+        public IList<Info> SelectAll(Info info)
+        {
+            return new InfoDao().SelectAll(info);
+
+        }
+
 
         public Info GetById(int id)
         {

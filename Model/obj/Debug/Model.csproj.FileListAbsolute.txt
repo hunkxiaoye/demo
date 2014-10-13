@@ -1,4 +1,4 @@
-F:\zero\demos\Model\bin\Debug\Model.dll
-F:\zero\demos\Model\bin\Debug\Model.pdb
-F:\zero\demos\Model\obj\Debug\Model.dll
-F:\zero\demos\Model\obj\Debug\Model.pdb
+D:\零度时代\demos\Model\bin\Debug\Model.dll
+D:\零度时代\demos\Model\bin\Debug\Model.pdb
+D:\零度时代\demos\Model\obj\Debug\Model.dll
+D:\零度时代\demos\Model\obj\Debug\Model.pdb

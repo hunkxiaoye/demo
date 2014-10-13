@@ -9,3 +9,14 @@ F:\zero\demos\demos\obj\Debug\demos.dll
 F:\zero\demos\demos\obj\Debug\demos.pdb
 F:\zero\demos\demos\bin\Dao.dll
 F:\zero\demos\demos\bin\Dao.pdb
+D:\零度时代\demos\demos\bin\demos.dll
+D:\零度时代\demos\demos\bin\demos.pdb
+D:\零度时代\demos\demos\bin\Bll.dll
+D:\零度时代\demos\demos\bin\Model.dll
+D:\零度时代\demos\demos\bin\Dao.dll
+D:\零度时代\demos\demos\bin\Bll.pdb
+D:\零度时代\demos\demos\bin\Model.pdb
+D:\零度时代\demos\demos\bin\Dao.pdb
+D:\零度时代\demos\demos\obj\Debug\demos.csprojResolveAssemblyReference.cache
+D:\零度时代\demos\demos\obj\Debug\demos.dll
+D:\零度时代\demos\demos\obj\Debug\demos.pdb

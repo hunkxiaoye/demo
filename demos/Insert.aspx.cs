@@ -79,7 +79,7 @@ namespace demos
             info.Attrid = int.Parse(Request.Form["attr"]);
             info.Tops = int.Parse(Request.Form["top"]);
             info.Title = Request.Form["title"];
-            info.Description = Request.Form["description"];
+            info.Description = Request.Form["des"];
             info.Comment = Request.Form["comment"];
             InfoBll ib =new InfoBll();
             ib.Add(info);

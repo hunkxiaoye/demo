@@ -5,3 +5,10 @@ F:\zero\demos\Dao\bin\Debug\Model.pdb
 F:\zero\demos\Dao\obj\Debug\Dao.csprojResolveAssemblyReference.cache
 F:\zero\demos\Dao\obj\Debug\Dao.dll
 F:\zero\demos\Dao\obj\Debug\Dao.pdb
+D:\零度时代\demos\Dao\bin\Debug\Dao.dll
+D:\零度时代\demos\Dao\bin\Debug\Dao.pdb
+D:\零度时代\demos\Dao\bin\Debug\Model.dll
+D:\零度时代\demos\Dao\bin\Debug\Model.pdb
+D:\零度时代\demos\Dao\obj\Debug\Dao.csprojResolveAssemblyReference.cache
+D:\零度时代\demos\Dao\obj\Debug\Dao.dll
+D:\零度时代\demos\Dao\obj\Debug\Dao.pdb

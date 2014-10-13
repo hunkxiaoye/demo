@@ -97,7 +97,49 @@ namespace Dao
                 }
             }
         }
-
+        public IList<Info> SelectAll(Info info)
+        {
+            IList<Info> list = new List<Info>();
+            SqlParameter[] parms = new SqlParameter[]
+            {
+                new SqlParameter("@Aid",SqlDbType.Int), 
+                new SqlParameter("@Sid",SqlDbType.Int),
+                new SqlParameter("@Rid",SqlDbType.Int), 
+                new SqlParameter("@AttrId",SqlDbType.Int),
+                new SqlParameter("@Title",SqlDbType.NVarChar) 
+            };
+            parms[0].Value = info.Aid;
+            parms[1].Value = info.Sid;
+            parms[2].Value = info.Rid;
+            parms[3].Value = info.Attrid;
+            parms[4].Value = info.Title;
+;
+                string sqls = "select * from Info where 1=1";
+                if (info.Aid != 0)
+                {
+                    sqls += " and Aid=@Aid";
+                }
+                if (info.Sid != 0)
+                {
+                    sqls += " and Sid=@Sid";
+                }
+                if (info.Rid != 0)
+                {
+                    sqls += " and Rid=@Rid";
+                }
+                if (info.Attrid != 0)
+                {
+                    sqls += " and Attr=@AttrId";
+                }
+                if (info.Title != "")
+                {
+                    sqls += " and Attr=@Name";
+                }
+                using (SqlDataReader reader = SqlHelper.ExecuteDataReader(sqls,parms))
+                {
+                    return ToModels(reader);
+                }  
+        }
         public Info ToModel(SqlDataReader reader)
         {
             Info info = new Info();

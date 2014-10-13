@@ -7,15 +7,42 @@
     <link href="Content/DLL/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"
         type="text/css" />
     <link href="Content/DLL/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <script src="Content/jquery-1.8.3.min.js" type="text/javascript"></script>   
+    <script src="Content/jquery-1.8.3.min.js" type="text/javascript"></script>  
+     <script type="text/javascript" src="ld.aspx"></script>
+    <script type="text/javascript">
+        function selectstate(aid) {
+            var selectstatelist = [];
+            for (var i = 0; i < statelist_json.length; i++) {
+                if (statelist_json[i].aid == aid)
+                    selectstatelist.push(statelist_json[i]);
+            }
+            return selectstatelist;
+        }
+        function instate(aid) {
+            var selectstatelist = selectstate(parseInt(aid));
+            var options = "";
+            for (var i = 0; i < selectstatelist.length; i++) {
+                options += "<option value=" + selectstatelist[i].id + ">" + selectstatelist[i].statename + "</option>";
+            }
+            $("#state").html(options);
+        }
+        function format(select) {
+            var aid = $(select).find("option:selected").val();
+            instate(aid);
+        }
+        $(function () {
+            var aid = $("#area").find("option:selected").val();
+            instate(aid);
+        });
+
+    </script> 
 </head>    
 <body>
 <form  runat="server">
     <div class="row">
         <div  class="span4">
         <span>选择区域</span>
-        <select id="area" name="area">
-            <option value="0">请选择</option>
+        <select id="area" name="area" onchange="format(this)">
             <% ShowArea(); %>
         </select>
         </div>
@@ -50,6 +77,7 @@
         <a href="Insert.aspx"  class="btn btn-primary">添加</a>
     </div>
    </form>
+
    <div>
     <table class="table table-bordered " >
     <tr>

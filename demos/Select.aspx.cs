@@ -91,7 +91,7 @@ namespace demos
             info.Rid = int.Parse(Request.Form["retriecal"]);
             info.Title = Request.Form["Title"];
             info.Attrid = int.Parse(Request.Form["attr"]);
-            ins = new InfoBll().GetAll();
+            ins = new InfoBll().SelectAll(info);
             for (int i = 0; i < ins.Count; i++)
             {
                 Select selects = new Select();
